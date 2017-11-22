@@ -12,6 +12,13 @@ package tweetie;
 public interface Composite {
     public void setID(String id);
     public String getId();
+
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString();
+    public long getCreationTime();
+
 }

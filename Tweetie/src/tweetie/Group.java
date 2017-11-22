@@ -14,8 +14,24 @@ import java.util.ArrayList;
 public class Group implements Composite{
     private String groupId = "";
     ArrayList <User> group;
+    private final long creationTime;
+    private final long creationTimeMinutes;
+    private final long creationTimeHours;
     public Group() {
         this.group = new ArrayList<>();
+        this.creationTime = System.currentTimeMillis();
+        this.creationTimeMinutes = (this.creationTime/60000)%60;
+        this.creationTimeHours = this.creationTime/3600000;
+    }
+    public long getCreationTimeMinute(){
+        return creationTimeMinutes;
+    }
+    public long getCreationTimeHour(){
+        return creationTimeHours;
+    }
+    @Override
+    public long getCreationTime(){
+        return creationTime;
     }
     @Override
     public void setID(String id){

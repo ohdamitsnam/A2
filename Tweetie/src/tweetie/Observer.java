@@ -14,9 +14,7 @@ public interface Observer {
 
     /**
      *
-     * @param <error>
      * @param tweet
-     * @param user
      */
     public void update(String tweet);
 }
